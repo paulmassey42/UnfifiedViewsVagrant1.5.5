@@ -10,6 +10,7 @@ apt-get install -y xinit
 apt-get install -y xinit
 apt-get install -y gnome-shell
 apt-get install -y gdm3
+apt-get install -y xterm
 dpkg-reconfigure gdm3
 
 # Now start to setup for building unified views, etc.
@@ -116,5 +117,10 @@ cp -fr /var/lib/unifiedviews/target/dpu /var/lib/unifiedviews/target/dpu.old
 for i in e* t* l* ; do mkdir -p /var/lib/unifiedviews/target/dpu/uv-$i; cp $i/target/uv-$i*.jar /var/lib/unifiedviews/target/dpu/uv-$i; done
 # Remove duplicate line??
 sed -e '24d'  plugins.sql | mysql -uroot -proot unifiedviews
+
+###############################################################
+# Setup other services
 update-rc.d unifiedviews-backend defaults
+# Allows login without password
+echo "vagrant ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/vagrant
 echo "****** done with bootstrap"
