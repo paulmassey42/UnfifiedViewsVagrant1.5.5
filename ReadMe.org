@@ -1,6 +1,7 @@
-#+TITLE: Vagrant
+#+TITLE: Vagrant ReadMe
 
 * Introduction
+
 Vagrant is a tool for automating the building and provisioning of
 virtual systems. The main interesting points being:
 
@@ -34,8 +35,8 @@ The /Vagrantfile/ contains the details of the system which is required.
 
 On the command line:
 
-- *git clone https://git.tenforce.com/Paul.Massey/UnifiedViewsVagrantMachine.git*
-- *cd UnifiedViewsVagrantMachine*
+- *git clone git remote add origin https://github.com/paulmassey42/VagrantUnifiedViews1.5.5.git"
+- *cd VagrantUnifiedViews1.5.5*
 - *vagrant plugin install vagrant-vbguest*
 - *vagrant up*
   Possibly select you network interface connection point
@@ -63,3 +64,4 @@ Then it should be possible to use the virtual machine
   connections settings sometimes cause problems (*halt*, wait a while
   and *up* again, normally clears the problem).
 - some freezes have been observed.
+
