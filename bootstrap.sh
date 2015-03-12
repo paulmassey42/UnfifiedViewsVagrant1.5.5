@@ -116,5 +116,5 @@ cp -fr /var/lib/unifiedviews/target/dpu /var/lib/unifiedviews/target/dpu.old
 for i in e* t* l* ; do mkdir -p /var/lib/unifiedviews/target/dpu/uv-$i; cp $i/target/uv-$i*.jar /var/lib/unifiedviews/target/dpu/uv-$i; done
 # Remove duplicate line??
 sed -e '24d'  plugins.sql | mysql -uroot -proot unifiedviews
-# update-rc.d unifiedviews-backend defaults
+update-rc.d unifiedviews-backend defaults
 echo "****** done with bootstrap"
