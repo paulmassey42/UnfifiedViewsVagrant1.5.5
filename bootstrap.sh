@@ -9,6 +9,7 @@ apt-get install -y xinit
 # apt-get install -y apache2
 apt-get install -y xinit
 apt-get install -y gnome-shell
+apt-get install -y gnome-terminal
 apt-get install -y gdm3
 apt-get install -y xterm
 dpkg-reconfigure gdm3
