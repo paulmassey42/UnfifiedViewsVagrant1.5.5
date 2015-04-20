@@ -7,11 +7,10 @@ apt-get update
 apt-get upgrade
 apt-get install -y xinit
 # apt-get install -y apache2
-apt-get install -y xinit
+apt-get install -y xterm
 apt-get install -y gnome-shell
 apt-get install -y gnome-terminal
 apt-get install -y gdm3
-apt-get install -y xterm
 dpkg-reconfigure gdm3
 
 # Now start to setup for building unified views, etc.
@@ -19,8 +18,8 @@ apt-get install -y openjdk-7-jre
 apt-get install -y openjdk-7-jdk
 apt-get install -y tomcat7
 apt-get install -y git
-apt-get install -y maven
 apt-get install -y bash
+apt-get install -y maven
 apt-get install -y debconf-utils
 # apt-get install -y emacs
 
