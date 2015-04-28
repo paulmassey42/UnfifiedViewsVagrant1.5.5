@@ -21,6 +21,7 @@ apt-get install -y tomcat7 git maven bash
 apt-get install -y debconf-utils dpkg-dev build-essential quilt gdebi
 echo "JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> /etc/default/tomcat7
 
+
 ###############################################################
 # Set the default values for the debconf questions
 #
