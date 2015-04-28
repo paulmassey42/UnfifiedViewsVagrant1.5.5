@@ -5,37 +5,18 @@
 #
 apt-get update
 apt-get upgrade
-apt-get install -y xinit
-# apt-get install -y apache2
-apt-get install -y xterm
-apt-get install -y gnome-shell
-apt-get install -y gnome-terminal
-apt-get install -y gdm3
+apt-get install -y xinit xterm iceweasel
+apt-get install -y gnome-shell gnome-terminal
+apt-get install -y gdm3 
 dpkg-reconfigure gdm3
 
 # Now start to setup for building unified views, etc.
-apt-get install -y openjdk-7-jre
-apt-get install -y openjdk-7-jdk
-apt-get install -y tomcat7
-apt-get install -y git
-apt-get install -y bash
+apt-get install -y openjdk-7-jre openjdk-7-jdk
+apt-get install -y tomcat7 
+apt-get install -y bash git
 apt-get install -y maven
 apt-get install -y debconf-utils
 # apt-get install -y emacs
-
-# Tools required for virtuoso building ...
-
-# apt-get install -y autoconf
-# apt-get install -y automake
-# apt-get install -y libtool
-# apt-get install -y flex
-# apt-get install -y bison
-# apt-get install -y gperf
-# apt-get install -y gawk
-# apt-get install -y m4
-# apt-get install -y make
-# apt-get install -y openssl
-# apt-get install -y libssl-dev
 
 apt-get install -y dpkg-dev build-essential
 apt-get install -y quilt gdebi
@@ -123,4 +104,12 @@ sed -e '24d'  plugins.sql | mysql -uroot -proot unifiedviews
 update-rc.d unifiedviews-backend defaults
 # Allows login without password
 echo "vagrant ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/vagrant
-echo "****** done with bootstrap"
+
+###############################################################
+# Change the default homepage
+echo "user_pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/syspref.js
+echo "_user_pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/browser/defaults/preferences/syspref.js
+
+###############################################################
+echo "****** done with bootstrap 1.5.5"
+###############################################################
