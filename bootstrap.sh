@@ -72,35 +72,6 @@ apt-get -y install unifiedviews-plugins
 apt-get -f -y install 
 
 ###############################################################
-# Include the plugins?
-echo "****** unified views installed - build plugins"
-
-# cd ${HOME}
-# if [ -d Plugins ]
-# then
-#   cd Plugins ; git pull
-# else
-#       git clone --branch UV_Plugins_v2.0.1 https://github.com/UnifiedViews/Plugins.git
-# fi
-# cd ${HOME}/Plugins
-# Exclude for the moment broken package
-# egrep -v e-relational pom.xml > pom2.xml
-# mv pom2.xml pom.xml
-# mvn install -Dprofile=extract-jars
-# echo "****** copy all plugins"
-# cp -fr /var/lib/unifiedviews/target/dpu /var/lib/unifiedviews/target/dpu.old
-# for i in e* t* l* 
-# do
-#     if [ "$i" != "e-relationalFromSql" ]
-#     then
-#       mkdir -p /var/lib/unifiedviews/target/dpu/uv-$i; 
-#      cp $i/target/uv-$i*.jar /var/lib/unifiedviews/target/dpu/uv-$i; 
-#    fi;
-# done
-# Remove duplicate line??
-# sed -e '24d'  plugins.sql | mysql -uroot -proot unifiedviews
-
-###############################################################
 # Setup other services
 # update-rc.d unifiedviews-backend defaults
 # Allows login without password
