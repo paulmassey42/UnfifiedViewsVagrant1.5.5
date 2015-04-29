@@ -107,8 +107,8 @@ echo "vagrant ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/vagrant
 
 ###############################################################
 # Change the default homepage
-echo "user_pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/syspref.js
-echo "_user_pref(\"browser.startup.homepage\", \"http://localhost:8080/lod2statworkbench\");" >> /etc/firefox/browser/defaults/preferences/syspref.js
+echo "user_pref(\"browser.startup.homepage\", \"http://localhost:8080/unifiedviews\");" >> /etc/iceweasel/pref/iceweasel.js
+echo "_user_pref(\"browser.startup.homepage\", \"http://localhost:8080/unifiedviews\");" >> /etc/iceweasel/profile/prefs.js
 
 ###############################################################
 echo "****** done with bootstrap 1.5.5"
