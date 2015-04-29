@@ -18,6 +18,7 @@ apt-get install -y maven
 apt-get install -y debconf-utils
 # apt-get install -y emacs
 
+apt-get install -y dkms virtualbox-guest-dkms virtualbox-guest-x11
 apt-get install -y dpkg-dev build-essential
 apt-get install -y quilt gdebi
 
@@ -58,7 +59,7 @@ echo "unifiedviews-backend-mysql      backend/mysql_db_user string uv"| debconf-
 # DB installations, etc which have customised values.
 
 apt-get install -y mysql-server-5.5 mysql-server
-apt-get install -y virtuoso-opensource
+apt-get install -y virtuoso-opensource virtuoso-vad-isparql virtuoso-vad-conductor
 apt-get install -y iceweasel
 apt-get update
 
